@@ -1,1 +1,53 @@
-Model HealthMonitoring ; package SysADL.types { value type Int { } value type Boolean { } value type String { } value type Void { } value type Real { } } Requirement VitalSignsIngestionFR ( 1 ) { text = "System should receive and save vital signs from IoT devices." Requirement VitalSignsEmissionFR ( 2 ) { text = "Vital signs should be emitted by wireless, bluetooth, USB or API." } Requirement VitalSignsNormalizationFR ( 3 ) { text = "Vital signs should be received in multiple formats and be normalized into HL7 protocol." } } Requirement VitalSignsMonitoringFR ( 4 ) { text = "System should monitor vital signs based on bed and patient" Requirement MonitoringPerPatientAndBedFR ( 5 ) { text = "Vital signs should be consumed for each bed/patient individually." } Requirement AnnomalyDetectionFR ( 6 ) { text = "Annomalies should be detected and redirected to correct destination." } Requirement PatientAndBedDetachmentFR ( 7 ) { text = "Patients may be detached from beds without losing your data." } } Requirement AnnomalyAlertFR ( 8 ) { text = "System should alert active professionals and also related medics in case of annomaly vital signs." Requirement WarmOrColdDoctorNotifyFR ( 9 ) { text = "Doctors should be called (high alert) when annomaly detected within one of your patients and doctor is working at hospital. But should be just notified (silent alert) if doctor is out of work." } Requirement GeneralNotifyAndAlertFR ( 10 ) { text = "A general alert should be sent to screens are monitoring with the system when annomalyes detected. Also, a sonoric alert should be emmited on monitoring room to available doctors and nurses." } } Requirement PatientDataSecurityNFR ( 11 ) { text = "All historic data of patients should be preserved for legal purposes, but protected to be viewed only by petient\'s doctor." } Requirement HighAvailabilityNFR ( 12 ) { text = "System should be available 24/7 for real-time monitoring, without downs." } Requirement ScalableToMaximumHospitalBedsNFR ( 13 ) { text = "System should be ready to receive the maximum quantity of beds/patients the hospital supports. A cloud architecture should be designed to scale resources on demand." } Requirement LatencyBetweenIoTAndDashboardNFR ( 14 ) { text = "Latency between the IoT device and the final dashboard should not be higher than 2 seconds." } Requirement LatencyBetweenIoTAndAlertNFR ( 15 ) { text = "Latency between the IoT device and alerts (in case of annomalies) should not be higher than 5 seconds." }
+Model HealthMonitoring ;
+
+package SysADL.types {
+	value type Int { }
+	value type Boolean { }
+	value type String { }
+	value type Void { }
+	value type Real { }
+	
+	datatype VitalSign { }
+	
+	datatype BloodPressure extends VitalSign { attributes : systolic : Int ; diastolic : Int ; }
+	datatype HeartRate extends VitalSign { attributes : rate: Int ; }
+	datatype OxygenSaturation extends VitalSign { attributes : saturation: Int ; }
+
+	datatype Doctor { attributes : id : Int ; name : String ; }
+	datatype Patient { attributes : id : Int ; name : String ; doctor : Doctor ; }
+	datatype Bed { attributes : id : Int ; patient : Patient ; }
+	
+	datatype Alert { attributes : id : Int ; bed : Bed ; patient : Patient ; vitalSign : VitalSign ; }
+}
+
+Requirement VitalSignsIngestionFR ( 1 ) { text = "System should receive and save vital signs from IoT devices."
+	Requirement VitalSignsEmissionFR ( 2 ) { text = "Vital signs should be emitted by wireless, bluetooth, USB or API." }
+	Requirement VitalSignsNormalizationFR ( 3 ) { text = "Vital signs should be received in multiple formats and be normalized into HL7 protocol." }
+}
+
+Requirement VitalSignsMonitoringFR ( 4 ) { text = "System should monitor vital signs based on bed and patient"
+	Requirement MonitoringPerPatientAndBedFR ( 5 ) { text = "Vital signs should be consumed for each bed/patient individually." }
+	Requirement AnnomalyDetectionFR ( 6 ) { text = "Annomalies should be detected and redirected to correct destination." }
+	Requirement PatientAndBedDetachmentFR ( 7 ) { text = "Patients may be detached from beds without losing your data." }
+}
+
+Requirement AnnomalyAlertFR ( 8 ) { text = "System should alert active professionals and also related medics in case of annomaly vital signs."
+	Requirement WarmOrColdDoctorNotifyFR ( 9 ) { text = "Doctors should be called (high alert) when annomaly detected within one of your patients and doctor is working at hospital. But should be just notified (silent alert) if doctor is out of work." }
+	Requirement GeneralNotifyAndAlertFR ( 10 ) { text = "A general alert should be sent to screens are monitoring with the system when annomalyes detected. Also, a sonoric alert should be emmited on monitoring room to available doctors and nurses." }
+}
+
+Requirement PatientDataSecurityNFR ( 11 ) { text = "All historic data of patients should be preserved for legal purposes, but protected to be viewed only by petient\'s doctor." }
+Requirement HighAvailabilityNFR ( 12 ) { text = "System should be available 24/7 for real-time monitoring, without downs." }
+Requirement ScalableToMaximumHospitalBedsNFR ( 13 ) { text = "System should be ready to receive the maximum quantity of beds/patients the hospital supports. A cloud architecture should be designed to scale resources on demand." }
+Requirement LatencyBetweenIoTAndDashboardNFR ( 14 ) { text = "Latency between the IoT device and the final dashboard should not be higher than 2 seconds." }
+Requirement LatencyBetweenIoTAndAlertNFR ( 15 ) { text = "Latency between the IoT device and alerts (in case of annomalies) should not be higher than 5 seconds." }
+
+package ports { }
+
+//package components { }
+
+//package connectors { }
+
+
+
+
