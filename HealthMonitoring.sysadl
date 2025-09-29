@@ -73,10 +73,20 @@ package Connectors {
 		participants : ~ destination : OxygenSaturationIPT ; ~ source : OxygenSaturationOPT ; flows : OxygenSaturation from source to destination
 	}
 	
+	connector def BloodPressureDashboardCN {
+		participants : ~ source : BloodPressureOPT ; ~ destination : BloodPressureIPT ; flows : BloodPressure from source to destination
+	}
+	connector def HeartRateDashboardCN {
+		participants : ~ source : HeartRateOPT ; ~ destination : HeartRateIPT ; flows : HeartRate from source to destination
+	}
+	connector def OxygenSaturationDashboardCN {
+		participants : ~ destination : OxygenSaturationIPT ; ~ source : OxygenSaturationOPT ; flows : OxygenSaturation from source to destination
+	}
+	
 	connector def AlertDashboardCN {
 		participants : ~ destination : AlertDashboardIPT ; ~ source : AlertOPT ; flows : Alert from source to destination
 	}
-	connector def AlertNotification {
+	connector def AlertNotificationCN {
 		participants : ~ destination : AlertNotificationIPT ; ~ source : AlertOPT ; flows : Alert from source to destination
 	}
 	connector def AlertSoundCN {
@@ -90,33 +100,47 @@ package Components {
 	import Ports ;
 	import Connectors ;
 	
-	boundary component def BloodPressureDeviceCP { ports : produces : BloodPressureOPT ; }
-	boundary component def HeartRateDeviceCP { ports : produces : HeartRateOPT ; }
-	boundary component def OxygenSaturationDeviceCP { ports : produces : OxygenSaturationOPT ; }
+	boundary component def BloodPressureDeviceCP { ports : producesBP : BloodPressureOPT ; }
+	boundary component def HeartRateDeviceCP { ports : producesHR : HeartRateOPT ; }
+	boundary component def OxygenSaturationDeviceCP { ports : producesOS : OxygenSaturationOPT ; }
 	
-	component def HealthMonitoringCP {
-		ports : injectsBP : BloodPressureIPT ; injectsHR : HeartRateIPT ; injectsOS : OxygenSaturationIPT ;   
-		configuration {
-			components :
-				HeartRateDeviceCP : HeartRateDeviceCP { using ports : collected : HeartRateOPT ; }
-				BloodPressureDeviceCP : BloodPressureDeviceCP { using ports : collected : BloodPressureOPT ; }
-				OxygenSaturationDeviceCP : OxygenSaturationDeviceCP { using ports : collected : OxygenSaturationOPT ; }
-		MonitoringController : MonitoringController { using ports : receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ; emitsPB : BloodPressureOPT ; emitsHR : HeartRateOPT ; emitsOS : OxygenSaturationOPT ; } AlertController : AlertController { using ports : receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ; emits : AlertOPT ; } }
-	}
-	
-	component def MonitoringController {
+	component def MonitoringControllerCP {
 		ports :
 			receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ;
 			emitsPB : BloodPressureOPT ; emitsHR : HeartRateOPT ; emitsOS : OxygenSaturationOPT ;
 	}
 	
-	component def AlertController {
+	component def AlertControllerCP {
 		ports :
-			receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ;
-			emits : AlertOPT ;
+			receivesAlertBP : BloodPressureIPT ; receivesAlertHR : HeartRateIPT ; receivesAlertOS : OxygenSaturationIPT ;
+			emitsAlert : AlertOPT ;
 	}
 	
-	boundary component def DashboardInterfaceCP {ports : receives : AlertDashboardIPT ; }
-	boundary component def NotificationAppCP { ports : receives : AlertNotificationIPT ; }
-	boundary component def SoundAlertOutCP { ports : receives : AlertSoundIPT ; }
+	component def HealthMonitoringCP {
+		ports :      
+		configuration {
+			components :
+				BloodPressureDeviceCP : BloodPressureDeviceCP { using ports : producesBP : BloodPressureOPT ; }
+				HeartRateDeviceCP : HeartRateDeviceCP { using ports : producesHR : HeartRateOPT ; }
+				OxygenSaturationDeviceCP : OxygenSaturationDeviceCP { using ports : producesOS : OxygenSaturationOPT ; }
+				MonitoringControllerCP : MonitoringControllerCP { using ports : receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ; emitsPB : BloodPressureOPT ; emitsHR : HeartRateOPT ; emitsOS : OxygenSaturationOPT ; }
+				
+		DashboardInterfaceCP : DashboardInterfaceCP { using ports : receivesAlertDashboard : AlertDashboardIPT ; receivesBPDashboard : BloodPressureIPT ; receivesHRDashboard : HeartRateIPT ; receivesOSDashboard : OxygenSaturationIPT ; } AlertControllerCP : AlertControllerCP { using ports : receivesAlertBP : BloodPressureIPT ; receivesAlertHR : HeartRateIPT ; receivesAlertOS : OxygenSaturationIPT ; emitsAlert : AlertOPT ; } NotificationAppCP : NotificationAppCP { using ports : receivesAlertNotification : AlertNotificationIPT ; } SoundAlertOutCP : SoundAlertOutCP { using ports : receivesAlertSound : AlertSoundIPT ; } connectors :
+			c1 : BloodPressureIngestionCN bindings producesBP = receivesBP ;
+			c2 : HeartRateIngestionCN bindings producesHR = receivesHR ;
+			c3 : OxygenSaturationIngestionCN bindings producesOS = receivesOS ;
+			
+			c4 : BloodPressureDashboardCN bindings emitsPB = receivesBPDashboard ;
+			c5 : HeartRateDashboardCN bindings emitsHR = receivesHRDashboard ;
+			c6 : OxygenSaturationDashboardCN bindings emitsOS = receivesOSDashboard ;
+			c7 : AlertDashboardCN bindings emitsAlert = receivesAlertDashboard ;
+			
+			c8 : AlertNotificationCN bindings emitsAlert = receivesAlertNotification ;
+			c9 : AlertSoundCN bindings emitsAlert = receivesAlertSound ;
+		}
+	}
+	
+	boundary component def DashboardInterfaceCP {ports : receivesAlertDashboard : AlertDashboardIPT ; receivesBPDashboard : BloodPressureIPT ; receivesHRDashboard : HeartRateIPT ; receivesOSDashboard : OxygenSaturationIPT ; }
+	boundary component def NotificationAppCP { ports : receivesAlertNotification : AlertNotificationIPT ; }
+	boundary component def SoundAlertOutCP { ports : receivesAlertSound : AlertSoundIPT ; }
 }
