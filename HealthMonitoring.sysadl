@@ -124,19 +124,25 @@ package Components {
 				HeartRateDeviceCP : HeartRateDeviceCP { using ports : producesHR : HeartRateOPT ; }
 				OxygenSaturationDeviceCP : OxygenSaturationDeviceCP { using ports : producesOS : OxygenSaturationOPT ; }
 				MonitoringControllerCP : MonitoringControllerCP { using ports : receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ; emitsPB : BloodPressureOPT ; emitsHR : HeartRateOPT ; emitsOS : OxygenSaturationOPT ; }
+				DashboardInterfaceCP : DashboardInterfaceCP {using ports : receivesAlertDashboard : AlertDashboardIPT ; receivesBPDashboard : BloodPressureIPT ; receivesHRDashboard : HeartRateIPT ; receivesOSDashboard : OxygenSaturationIPT ; }
+				AlertControllerCP : AlertControllerCP { using ports : receivesAlertBP : BloodPressureIPT ; receivesAlertHR : HeartRateIPT ; receivesAlertOS : OxygenSaturationIPT ; emitsAlert : AlertOPT ; }
+				NotificationAppCP : NotificationAppCP { using ports : receivesAlertNotification : AlertNotificationIPT ; }
+				SoundAlertOutCP : SoundAlertOutCP { using ports : receivesAlertSound : AlertSoundIPT ; }
+			connectors :
+				c1 : BloodPressureIngestionCN bindings producesBP = receivesBP ;
+				c2 : HeartRateIngestionCN bindings producesHR = receivesHR ;
+				c3 : OxygenSaturationIngestionCN bindings producesOS = receivesOS ;
 				
-		DashboardInterfaceCP : DashboardInterfaceCP { using ports : receivesAlertDashboard : AlertDashboardIPT ; receivesBPDashboard : BloodPressureIPT ; receivesHRDashboard : HeartRateIPT ; receivesOSDashboard : OxygenSaturationIPT ; } AlertControllerCP : AlertControllerCP { using ports : receivesAlertBP : BloodPressureIPT ; receivesAlertHR : HeartRateIPT ; receivesAlertOS : OxygenSaturationIPT ; emitsAlert : AlertOPT ; } NotificationAppCP : NotificationAppCP { using ports : receivesAlertNotification : AlertNotificationIPT ; } SoundAlertOutCP : SoundAlertOutCP { using ports : receivesAlertSound : AlertSoundIPT ; } connectors :
-			c1 : BloodPressureIngestionCN bindings producesBP = receivesBP ;
-			c2 : HeartRateIngestionCN bindings producesHR = receivesHR ;
-			c3 : OxygenSaturationIngestionCN bindings producesOS = receivesOS ;
-			
-			c4 : BloodPressureDashboardCN bindings emitsPB = receivesBPDashboard ;
-			c5 : HeartRateDashboardCN bindings emitsHR = receivesHRDashboard ;
-			c6 : OxygenSaturationDashboardCN bindings emitsOS = receivesOSDashboard ;
-			c7 : AlertDashboardCN bindings emitsAlert = receivesAlertDashboard ;
-			
-			c8 : AlertNotificationCN bindings emitsAlert = receivesAlertNotification ;
-			c9 : AlertSoundCN bindings emitsAlert = receivesAlertSound ;
+				c4 : BloodPressureDashboardCN bindings emitsPB = receivesBPDashboard ;
+				c5 : HeartRateDashboardCN bindings emitsHR = receivesHRDashboard ;
+				c6 : OxygenSaturationDashboardCN bindings emitsOS = receivesOSDashboard ;
+				c7 : AlertDashboardCN bindings emitsAlert = receivesAlertDashboard ;
+				
+				c8 : AlertNotificationCN bindings emitsAlert = receivesAlertNotification ;
+				c9 : AlertSoundCN bindings emitsAlert = receivesAlertSound ;
+				c10 : BloodPressureDashboardCN bindings emitsPB = receivesAlertBP ;
+				c11 : HeartRateDashboardCN bindings emitsHR = receivesAlertHR ;
+				c12 : OxygenSaturationDashboardCN bindings emitsOS = receivesAlertOS ;
 		}
 	}
 	
