@@ -42,12 +42,45 @@ Requirement ScalableToMaximumHospitalBedsNFR ( 13 ) { text = "System should be r
 Requirement LatencyBetweenIoTAndDashboardNFR ( 14 ) { text = "Latency between the IoT device and the final dashboard should not be higher than 2 seconds." }
 Requirement LatencyBetweenIoTAndAlertNFR ( 15 ) { text = "Latency between the IoT device and alerts (in case of annomalies) should not be higher than 5 seconds." }
 
-package ports { }
-
 //package components { }
 
-//package connectors { }
+package  Ports {
+	import SysADL.types ;
+	
+	port def BloodPressureOPT { flow out BloodPressure }
+	port def BloodPressureIPT { flow in BloodPressure }
+	
+	port def HeartRateOPT { flow out HeartRate }
+	port def HeartRateIPT { flow in HeartRate }
+	
+	port def OxygenSaturationOPT { flow out OxygenSaturation }
+	port def OxygenSaturationIPT { flow in OxygenSaturation }
+	
+	port def AlertOPT { flow out Alert }
+	port def AlertDashboardIPT { flow in Alert }
+	port def AlertNotificationIPT { flow in Alert }
+}
 
-
-
-
+package Connectors {
+	import Ports ;
+	
+	connector def BloodPressureIngestionCN {
+		participants : ~ source : BloodPressureOPT ; ~ destination : BloodPressureIPT ; flows : BloodPressure from source to destination
+	}
+	connector def HeartRateIngestionCN {
+		participants : ~ source : HeartRateOPT ; ~ destination : HeartRateIPT ; flows : HeartRate from source to destination
+	}
+	connector def OxygenSaturationIngestionCN {
+		participants : ~ destination : OxygenSaturationIPT ; ~ source : OxygenSaturationOPT ; flows : OxygenSaturation from source to destination
+	}
+	
+	connector def BloodPressureMonitoringCN {
+		participants : ~ source : BloodPressureOPT ; ~ destination : BloodPressureIPT ; flows : BloodPressure from source to destination
+	}
+	connector def HeartRateMonitoringCN {
+		participants : ~ source : HeartRateOPT ; ~ destination : HeartRateIPT ; flows : HeartRate from source to destination
+	}
+	connector def OxygenSaturationMonitoringCN {
+		participants : ~ destination : OxygenSaturationIPT ; ~ source : OxygenSaturationOPT ; flows : OxygenSaturation from source to destination
+	}
+}
