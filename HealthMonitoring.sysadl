@@ -42,8 +42,6 @@ Requirement ScalableToMaximumHospitalBedsNFR ( 13 ) { text = "System should be r
 Requirement LatencyBetweenIoTAndDashboardNFR ( 14 ) { text = "Latency between the IoT device and the final dashboard should not be higher than 2 seconds." }
 Requirement LatencyBetweenIoTAndAlertNFR ( 15 ) { text = "Latency between the IoT device and alerts (in case of annomalies) should not be higher than 5 seconds." }
 
-//package components { }
-
 package  Ports {
 	import SysADL.types ;
 	
@@ -59,6 +57,7 @@ package  Ports {
 	port def AlertOPT { flow out Alert }
 	port def AlertDashboardIPT { flow in Alert }
 	port def AlertNotificationIPT { flow in Alert }
+	port def AlertSoundIPT { flow in Alert }
 }
 
 package Connectors {
@@ -74,13 +73,50 @@ package Connectors {
 		participants : ~ destination : OxygenSaturationIPT ; ~ source : OxygenSaturationOPT ; flows : OxygenSaturation from source to destination
 	}
 	
-	connector def BloodPressureMonitoringCN {
-		participants : ~ source : BloodPressureOPT ; ~ destination : BloodPressureIPT ; flows : BloodPressure from source to destination
+	connector def AlertDashboardCN {
+		participants : ~ destination : AlertDashboardIPT ; ~ source : AlertOPT ; flows : Alert from source to destination
 	}
-	connector def HeartRateMonitoringCN {
-		participants : ~ source : HeartRateOPT ; ~ destination : HeartRateIPT ; flows : HeartRate from source to destination
+	connector def AlertNotification {
+		participants : ~ destination : AlertNotificationIPT ; ~ source : AlertOPT ; flows : Alert from source to destination
 	}
-	connector def OxygenSaturationMonitoringCN {
-		participants : ~ destination : OxygenSaturationIPT ; ~ source : OxygenSaturationOPT ; flows : OxygenSaturation from source to destination
+	connector def AlertSoundCN {
+		participants : ~ destination : AlertSoundIPT ; ~ source : AlertOPT ; flows : Alert from source to destination
 	}
+
+}
+
+package Components {
+	import SysADL.types ;
+	import Ports ;
+	import Connectors ;
+	
+	boundary component def BloodPressureDeviceCP { ports : produces : BloodPressureOPT ; }
+	boundary component def HeartRateDeviceCP { ports : produces : HeartRateOPT ; }
+	boundary component def OxygenSaturationDeviceCP { ports : produces : OxygenSaturationOPT ; }
+	
+	component def HealthMonitoringCP {
+		ports : injectsBP : BloodPressureIPT ; injectsHR : HeartRateIPT ; injectsOS : OxygenSaturationIPT ;   
+		configuration {
+			components :
+				HeartRateDeviceCP : HeartRateDeviceCP { using ports : collected : HeartRateOPT ; }
+				BloodPressureDeviceCP : BloodPressureDeviceCP { using ports : collected : BloodPressureOPT ; }
+				OxygenSaturationDeviceCP : OxygenSaturationDeviceCP { using ports : collected : OxygenSaturationOPT ; }
+		MonitoringController : MonitoringController { using ports : receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ; emitsPB : BloodPressureOPT ; emitsHR : HeartRateOPT ; emitsOS : OxygenSaturationOPT ; } AlertController : AlertController { using ports : receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ; emits : AlertOPT ; } }
+	}
+	
+	component def MonitoringController {
+		ports :
+			receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ;
+			emitsPB : BloodPressureOPT ; emitsHR : HeartRateOPT ; emitsOS : OxygenSaturationOPT ;
+	}
+	
+	component def AlertController {
+		ports :
+			receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ;
+			emits : AlertOPT ;
+	}
+	
+	boundary component def DashboardInterfaceCP {ports : receives : AlertDashboardIPT ; }
+	boundary component def NotificationAppCP { ports : receives : AlertNotificationIPT ; }
+	boundary component def SoundAlertOutCP { ports : receives : AlertSoundIPT ; }
 }
