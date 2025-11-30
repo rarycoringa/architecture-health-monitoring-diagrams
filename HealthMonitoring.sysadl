@@ -9,7 +9,7 @@ package SysADL.types {
 	
 	datatype VitalSign { }
 	
-	datatype BloodPressure extends VitalSign { attributes : systolic : Int ; diastolic : Int ; }
+	datatype BloodPressure extends VitalSign {attributes : systolic : Int ; diastolic : Int ; }
 	datatype HeartRate extends VitalSign { attributes : rate: Int ; }
 	datatype OxygenSaturation extends VitalSign { attributes : saturation: Int ; }
 
@@ -47,12 +47,18 @@ package  Ports {
 	
 	port def BloodPressureOPT { flow out BloodPressure }
 	port def BloodPressureIPT { flow in BloodPressure }
+	port def AnnomalyBloodPressureOPT { flow out BloodPressure }
+	port def AnnomalyBloodPressureIPT { flow in BloodPressure }
 	
 	port def HeartRateOPT { flow out HeartRate }
 	port def HeartRateIPT { flow in HeartRate }
+	port def AnnomalyHeartRateOPT { flow out HeartRate }
+	port def AnnomalyHeartRateIPT { flow in HeartRate }
 	
 	port def OxygenSaturationOPT { flow out OxygenSaturation }
 	port def OxygenSaturationIPT { flow in OxygenSaturation }
+	port def AnnomalyOxygenSaturationOPT { flow out OxygenSaturation }
+	port def AnnomalyOxygenSaturationIPT { flow in OxygenSaturation }
 	
 	port def AlertOPT { flow out Alert }
 	port def AlertDashboardIPT { flow in Alert }
@@ -71,6 +77,16 @@ package Connectors {
 	}
 	connector def OxygenSaturationIngestionCN {
 		participants : ~ destination : OxygenSaturationIPT ; ~ source : OxygenSaturationOPT ; flows : OxygenSaturation from source to destination
+	}
+	
+	connector def AnnomalyBloodPressureCN {
+		participants : ~ source : AnnomalyBloodPressureOPT ; ~ destination : AnnomalyBloodPressureIPT ; flows : BloodPressure from source to destination
+	}
+	connector def AnnomalyHeartRateCN {
+		participants : ~ source : AnnomalyHeartRateOPT ; ~ destination : AnnomalyHeartRateIPT ; flows : HeartRate from source to destination
+	}
+	connector def AnnomalyOxygenSaturationCN {
+		participants : ~ source : AnnomalyOxygenSaturationOPT ; ~ destination : AnnomalyOxygenSaturationIPT ; flows : OxygenSaturation from source to destination
 	}
 	
 	connector def BloodPressureDashboardCN {
@@ -92,7 +108,6 @@ package Connectors {
 	connector def AlertSoundCN {
 		participants : ~ destination : AlertSoundIPT ; ~ source : AlertOPT ; flows : Alert from source to destination
 	}
-
 }
 
 package Components {
@@ -108,11 +123,12 @@ package Components {
 		ports :
 			receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ;
 			emitsPB : BloodPressureOPT ; emitsHR : HeartRateOPT ; emitsOS : OxygenSaturationOPT ;
+			emitsAnnomalyBP : AnnomalyBloodPressureOPT ; emitsAnnomalyHR : AnnomalyHeartRateOPT ; emitsAnnomalyOS : AnnomalyOxygenSaturationOPT ;
 	}
 	
 	component def AlertControllerCP {
 		ports :
-			receivesAlertBP : BloodPressureIPT ; receivesAlertHR : HeartRateIPT ; receivesAlertOS : OxygenSaturationIPT ;
+			receivesAnnomalyBP : AnnomalyBloodPressureIPT ; receivesAnnomalyHR : AnnomalyHeartRateIPT ; receivesAnnomalyOS : AnnomalyOxygenSaturationIPT ;
 			emitsAlert : AlertOPT ;
 	}
 	
@@ -120,12 +136,12 @@ package Components {
 		ports :      
 		configuration {
 			components :
-				BloodPressureDeviceCP : BloodPressureDeviceCP { using ports : producesBP : BloodPressureOPT ; }
-				HeartRateDeviceCP : HeartRateDeviceCP { using ports : producesHR : HeartRateOPT ; }
-				OxygenSaturationDeviceCP : OxygenSaturationDeviceCP { using ports : producesOS : OxygenSaturationOPT ; }
-				MonitoringControllerCP : MonitoringControllerCP { using ports : receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ; emitsPB : BloodPressureOPT ; emitsHR : HeartRateOPT ; emitsOS : OxygenSaturationOPT ; }
+				BloodPressureDeviceCP : BloodPressureDeviceCP [ 1 , 5 ] { using ports : producesBP : BloodPressureOPT ; }
+				HeartRateDeviceCP : HeartRateDeviceCP [ 1 , 5 ] { using ports : producesHR : HeartRateOPT ; }
+				OxygenSaturationDeviceCP : OxygenSaturationDeviceCP [ 1 , 5 ] { using ports : producesOS : OxygenSaturationOPT ; }
+				MonitoringControllerCP : MonitoringControllerCP { using ports : receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ; emitsPB : BloodPressureOPT ; emitsHR : HeartRateOPT ; emitsOS : OxygenSaturationOPT ; emitsAnnomalyBP : AnnomalyBloodPressureOPT ; emitsAnnomalyHR : AnnomalyHeartRateOPT ; emitsAnnomalyOS : AnnomalyOxygenSaturationOPT ; }
 				DashboardInterfaceCP : DashboardInterfaceCP {using ports : receivesAlertDashboard : AlertDashboardIPT ; receivesBPDashboard : BloodPressureIPT ; receivesHRDashboard : HeartRateIPT ; receivesOSDashboard : OxygenSaturationIPT ; }
-				AlertControllerCP : AlertControllerCP { using ports : receivesAlertBP : BloodPressureIPT ; receivesAlertHR : HeartRateIPT ; receivesAlertOS : OxygenSaturationIPT ; emitsAlert : AlertOPT ; }
+				AlertControllerCP : AlertControllerCP { using ports : receivesAnnomalyBP : AnnomalyBloodPressureIPT ; receivesAnnomalyHR : AnnomalyHeartRateIPT ; receivesAnnomalyOS : AnnomalyOxygenSaturationIPT ; emitsAlert : AlertOPT ; }
 				NotificationAppCP : NotificationAppCP { using ports : receivesAlertNotification : AlertNotificationIPT ; }
 				SoundAlertOutCP : SoundAlertOutCP { using ports : receivesAlertSound : AlertSoundIPT ; }
 			connectors :
@@ -140,9 +156,10 @@ package Components {
 				
 				c8 : AlertNotificationCN bindings emitsAlert = receivesAlertNotification ;
 				c9 : AlertSoundCN bindings emitsAlert = receivesAlertSound ;
-				c10 : BloodPressureDashboardCN bindings emitsPB = receivesAlertBP ;
-				c11 : HeartRateDashboardCN bindings emitsHR = receivesAlertHR ;
-				c12 : OxygenSaturationDashboardCN bindings emitsOS = receivesAlertOS ;
+				
+				c10 : AnnomalyBloodPressureCN bindings emitsAnnomalyBP = receivesAnnomalyBP ;
+				c11 : AnnomalyHeartRateCN bindings emitsAnnomalyHR = receivesAnnomalyHR ;
+				c12 : AnnomalyOxygenSaturationCN bindings emitsAnnomalyOS = receivesAnnomalyOS ;
 		}
 	}
 	
