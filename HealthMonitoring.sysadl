@@ -139,7 +139,17 @@ package Components {
 		configuration {
 			components :
 				DefaultControllerCP : DefaultControllerCP [ 1, 1 ] { using ports : receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ; emitsPB : BloodPressureOPT ; emitsHR : HeartRateOPT ; emitsOS : OxygenSaturationOPT ; }
-				AnnomalyControllerCP : AnnomalyControllerCP [ 1, 1 ] { using ports : receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ; emitsAnnomalyBP : AnnomalyBloodPressureOPT ; emitsAnnomalyHR : AnnomalyHeartRateOPT ; emitsAnnomalyOS : AnnomalyOxygenSaturationOPT ; }
+				AnnomalyControllerCP : AnnomalyControllerCP [ 1, 1 ] { using ports : receivesAnnomalyBP : BloodPressureIPT ; receivesAnnomalyHR : HeartRateIPT ; receivesAnnomalyOS : OxygenSaturationIPT ; emitsAnnomalyBP : AnnomalyBloodPressureOPT ; emitsAnnomalyHR : AnnomalyHeartRateOPT ; emitsAnnomalyOS : AnnomalyOxygenSaturationOPT ; }
+			delegations :
+				receivesBP to receivesBP
+				receivesHR to receivesHR
+				receivesOS to receivesOS
+				emitsPB to emitsPB
+				emitsHR to emitsHR
+				emitsOS to emitsOS
+				receivesAnnomalyBP to receivesBP
+				receivesAnnomalyHR to receivesHR
+				receivesAnnomalyOS to receivesOS
 		}
 	}
 	
