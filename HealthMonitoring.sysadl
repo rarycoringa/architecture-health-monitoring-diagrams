@@ -119,11 +119,28 @@ package Components {
 	boundary component def HeartRateDeviceCP { ports : producesHR : HeartRateOPT ; }
 	boundary component def OxygenSaturationDeviceCP { ports : producesOS : OxygenSaturationOPT ; }
 	
+	component def DefaultControllerCP {
+		ports:
+			receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ;
+			emitsPB : BloodPressureOPT ; emitsHR : HeartRateOPT ; emitsOS : OxygenSaturationOPT ;
+	}
+	
+	component def AnnomalyControllerCP {
+		ports:
+			receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ;
+			emitsAnnomalyBP : AnnomalyBloodPressureOPT ; emitsAnnomalyHR : AnnomalyHeartRateOPT ; emitsAnnomalyOS : AnnomalyOxygenSaturationOPT ;
+	}
+	
 	component def MonitoringControllerCP {
 		ports :
 			receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ;
 			emitsPB : BloodPressureOPT ; emitsHR : HeartRateOPT ; emitsOS : OxygenSaturationOPT ;
 			emitsAnnomalyBP : AnnomalyBloodPressureOPT ; emitsAnnomalyHR : AnnomalyHeartRateOPT ; emitsAnnomalyOS : AnnomalyOxygenSaturationOPT ;
+		configuration {
+			components :
+				DefaultControllerCP : DefaultControllerCP [ 1, 1 ] { }
+				AnnomalyControllerCP : AnnomalyControllerCP [ 1, 1 ] { }
+		}
 	}
 	
 	component def AlertControllerCP {
