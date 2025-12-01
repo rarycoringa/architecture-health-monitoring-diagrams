@@ -169,40 +169,59 @@ package Components {
 
 	activity def ProcessVitalSignsAC ( bpIn : BloodPressure ) ( hrIn : HeartRate ) ( osIn : OxygenSaturation ) : ( bpOut : BloodPressure , hrOut : HeartRate , osOut : OxygenSaturation ) { body { 
 		actions :
-			processBloodPressureAN : processBloodPressureAN { using pins : bloodPressureIn : BloodPressure ; }
-			processHeartRateAN : processHeartRateAN { using pins : heartRateIn : HeartRate ; }
-			processOxygenSaturationAN : processOxygenSaturationAN { using pins : oxygenSaturationIn : OxygenSaturation ; }
+			ProcessBloodPressureAN : ProcessBloodPressureAN { using pins : bloodPressureIn : BloodPressure ; }
+			ProcessHeartRateAN : ProcessHeartRateAN { using pins : heartRateIn : HeartRate ; }
+			ProcessOxygenSaturationAN : ProcessOxygenSaturationAN { using pins : oxygenSaturationIn : OxygenSaturation ; }
 			
 		delegate bpIn to bloodPressureIn
 		delegate hrIn to heartRateIn
 		delegate osIn to oxygenSaturationIn
 		
-		delegate bpOut to processBloodPressureAN
-		delegate hrOut to processHeartRateAN
-		delegate osOut to processOxygenSaturationAN
+		delegate bpOut to ProcessBloodPressureAN
+		delegate hrOut to ProcessHeartRateAN
+		delegate osOut to ProcessOxygenSaturationAN
 	} }
 	
-	action def processBloodPressureAN ( bloodPressureIn : BloodPressure ) : BloodPressure { }
-	action def processHeartRateAN ( heartRateIn : HeartRate ) : HeartRate { }
-	action def processOxygenSaturationAN ( oxygenSaturationIn : OxygenSaturation ) : OxygenSaturation { }
+	action def ProcessBloodPressureAN ( bloodPressureIn : BloodPressure ) : BloodPressure { }
+	action def ProcessHeartRateAN ( heartRateIn : HeartRate ) : HeartRate { }
+	action def ProcessOxygenSaturationAN ( oxygenSaturationIn : OxygenSaturation ) : OxygenSaturation { }
 	
-	activity def EvaluateAnnomaly ( bpIn : BloodPressure ) ( hrIn : HeartRate ) ( osIn : OxygenSaturation ) : ( bpOut : BloodPressure , hrOut : HeartRate , osOut : OxygenSaturation ) { body {
+	activity def EvaluateAnnomalyAC ( bpIn : BloodPressure ) ( hrIn : HeartRate ) ( osIn : OxygenSaturation ) : ( bpOut : BloodPressure , hrOut : HeartRate , osOut : OxygenSaturation ) { body {
 		actions :
-			evaluateBloodPressureAN : evaluateBloodPressureAN { using pins : bloodPressureIn : BloodPressure ; }
-			evaluateHeartRateAN : evaluateHeartRateAN { using pins : heartRateIn : HeartRate ; }
-			evaluateOxygenSaturationAN : evaluateOxygenSaturationAN { using pins : oxygenSaturationIn : OxygenSaturation ; }
+			EvaluateBloodPressureAN : EvaluateBloodPressureAN { using pins : bloodPressureIn : BloodPressure ; }
+			EvaluateHeartRateAN : EvaluateHeartRateAN { using pins : heartRateIn : HeartRate ; }
+			EvaluateOxygenSaturationAN : EvaluateOxygenSaturationAN { using pins : oxygenSaturationIn : OxygenSaturation ; }
 			
 		delegate bpIn to bloodPressureIn
 		delegate hrIn to heartRateIn
 		delegate osIn to oxygenSaturationIn
 		
-		delegate bpOut to evaluateBloodPressureAN
-		delegate hrOut to evaluateHeartRateAN
-		delegate osOut to evaluateOxygenSaturationAN
+		delegate bpOut to EvaluateBloodPressureAN
+		delegate hrOut to EvaluateHeartRateAN
+		delegate osOut to EvaluateOxygenSaturationAN
 	} }
 	
-	action def evaluateBloodPressureAN ( bloodPressureIn : BloodPressure ) : BloodPressure { }
-	action def evaluateHeartRateAN ( heartRateIn : HeartRate ) : HeartRate { }
-	action def evaluateOxygenSaturationAN ( oxygenSaturationIn : OxygenSaturation ) : OxygenSaturation { }
-
+	action def EvaluateBloodPressureAN ( bloodPressureIn : BloodPressure ) : BloodPressure { }
+	action def EvaluateHeartRateAN ( heartRateIn : HeartRate ) : HeartRate { }
+	action def EvaluateOxygenSaturationAN ( oxygenSaturationIn : OxygenSaturation ) : OxygenSaturation { }
+	
+	activity def ConvertVitalSignsIntoAlertAC ( bpIn : BloodPressure ) ( hrIn : HeartRate ) ( osIn : OxygenSaturation ) : ( alertOut : Alert ) { body {
+		actions:
+			ConvertBloodPressureAN : ConvertBloodPressureAN { using pins : bloodPressureIn : BloodPressure ; }
+			ConvertHeartRateAN : ConvertHeartRateAN { using pins : heartRateIn : HeartRate ; }
+			ConvertOxygenSaturationAN : ConvertOxygenSaturationAN { using pins : oxygenSaturationIn : OxygenSaturation ; }
+		
+		delegate bpIn to bloodPressureIn
+		delegate hrIn to heartRateIn
+		delegate osIn to oxygenSaturationIn
+		
+		delegate alertOut to ConvertBloodPressureAN
+		delegate alertOut to ConvertHeartRateAN
+		delegate alertOut to ConvertOxygenSaturationAN
+	} }
+	
+	action def ConvertBloodPressureAN ( bloodPressureIn : BloodPressure ) : Alert { }
+	action def ConvertHeartRateAN ( heartRateIn : HeartRate ) : Alert { }
+	action def ConvertOxygenSaturationAN ( oxygenSaturationIn : OxygenSaturation ) : Alert { }
+	
 }
