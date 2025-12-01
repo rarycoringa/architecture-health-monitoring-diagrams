@@ -138,8 +138,8 @@ package Components {
 			emitsAnnomalyBP : AnnomalyBloodPressureOPT ; emitsAnnomalyHR : AnnomalyHeartRateOPT ; emitsAnnomalyOS : AnnomalyOxygenSaturationOPT ;
 		configuration {
 			components :
-				DefaultControllerCP : DefaultControllerCP [ 1, 1 ] { }
-				AnnomalyControllerCP : AnnomalyControllerCP [ 1, 1 ] { }
+				DefaultControllerCP : DefaultControllerCP [ 1, 1 ] { using ports : receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ; emitsPB : BloodPressureOPT ; emitsHR : HeartRateOPT ; emitsOS : OxygenSaturationOPT ; }
+				AnnomalyControllerCP : AnnomalyControllerCP [ 1, 1 ] { using ports : receivesBP : BloodPressureIPT ; receivesHR : HeartRateIPT ; receivesOS : OxygenSaturationIPT ; emitsAnnomalyBP : AnnomalyBloodPressureOPT ; emitsAnnomalyHR : AnnomalyHeartRateOPT ; emitsAnnomalyOS : AnnomalyOxygenSaturationOPT ; }
 		}
 	}
 	

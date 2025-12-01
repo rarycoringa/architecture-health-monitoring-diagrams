@@ -51,7 +51,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']"/>
         <target xmi:type="sysadl:Configuration" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='HealthMonitoringCP']/@composite"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_LbRAQM7cEfCm7_hXuDaP8g" name="Internal Block Diagram (Structural IBD)" repPath="#_LbPLEM7cEfCm7_hXuDaP8g" changeId="1764610551266">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_LbRAQM7cEfCm7_hXuDaP8g" name="Internal Block Diagram (Structural IBD)" repPath="#_LbPLEM7cEfCm7_hXuDaP8g" changeId="1764614564134">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']"/>
         <target xmi:type="sysadl:Configuration" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite"/>
       </ownedRepresentationDescriptors>
@@ -8844,8 +8844,74 @@
                 <styles xmi:type="notation:ShapeStyle" xmi:id="_Ldw6o87cEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldw6pM7cEfCm7_hXuDaP8g"/>
               </children>
+              <children xmi:type="notation:Node" xmi:id="_No0t4M7lEfCm7_hXuDaP8g" type="3001" element="_NoQGI87lEfCm7_hXuDaP8g">
+                <children xmi:type="notation:Node" xmi:id="_No0t487lEfCm7_hXuDaP8g" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_No0t5M7lEfCm7_hXuDaP8g" x="-146"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_No5mYM7lEfCm7_hXuDaP8g" type="3003" element="_NoVlsM7lEfCm7_hXuDaP8g">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_No5mYc7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No5mYs7lEfCm7_hXuDaP8g"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_No0t4c7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No0t4s7lEfCm7_hXuDaP8g" x="-12" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_No18AM7lEfCm7_hXuDaP8g" type="3001" element="_NoWMwM7lEfCm7_hXuDaP8g">
+                <children xmi:type="notation:Node" xmi:id="_No18A87lEfCm7_hXuDaP8g" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_No18BM7lEfCm7_hXuDaP8g" x="-125"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_No6NcM7lEfCm7_hXuDaP8g" type="3003" element="_NoWMwc7lEfCm7_hXuDaP8g">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_No6Ncc7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No6Ncs7lEfCm7_hXuDaP8g"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_No18Ac7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No18As7lEfCm7_hXuDaP8g" x="-12" y="24" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_No2jEM7lEfCm7_hXuDaP8g" type="3001" element="_NoWMw87lEfCm7_hXuDaP8g">
+                <children xmi:type="notation:Node" xmi:id="_No2jE87lEfCm7_hXuDaP8g" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_No2jFM7lEfCm7_hXuDaP8g" x="-162"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_No6Nc87lEfCm7_hXuDaP8g" type="3003" element="_NoWMxM7lEfCm7_hXuDaP8g">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_No6NdM7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No6Ndc7lEfCm7_hXuDaP8g"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_No2jEc7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No2jEs7lEfCm7_hXuDaP8g" x="-12" y="48" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_No3KIM7lEfCm7_hXuDaP8g" type="3001" element="_NoWMxs7lEfCm7_hXuDaP8g">
+                <children xmi:type="notation:Node" xmi:id="_No3KI87lEfCm7_hXuDaP8g" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_No3KJM7lEfCm7_hXuDaP8g" x="21"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_No6Nds7lEfCm7_hXuDaP8g" type="3003" element="_NoWz0M7lEfCm7_hXuDaP8g">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_No6Nd87lEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No6NeM7lEfCm7_hXuDaP8g"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_No3KIc7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No3KIs7lEfCm7_hXuDaP8g" x="142" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_No3xMM7lEfCm7_hXuDaP8g" type="3001" element="_NoWz0s7lEfCm7_hXuDaP8g">
+                <children xmi:type="notation:Node" xmi:id="_No3xM87lEfCm7_hXuDaP8g" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_No3xNM7lEfCm7_hXuDaP8g" x="21"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_No6Nec7lEfCm7_hXuDaP8g" type="3003" element="_NoWz087lEfCm7_hXuDaP8g">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_No6Nes7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No6Ne87lEfCm7_hXuDaP8g"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_No3xMc7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No3xMs7lEfCm7_hXuDaP8g" x="142" y="24" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_No4_UM7lEfCm7_hXuDaP8g" type="3001" element="_NoWz1c7lEfCm7_hXuDaP8g">
+                <children xmi:type="notation:Node" xmi:id="_No4_U87lEfCm7_hXuDaP8g" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_No4_VM7lEfCm7_hXuDaP8g" x="21"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_No6NfM7lEfCm7_hXuDaP8g" type="3003" element="_NoWz1s7lEfCm7_hXuDaP8g">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_No6Nfc7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No6Nfs7lEfCm7_hXuDaP8g"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_No4_Uc7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No4_Us7lEfCm7_hXuDaP8g" x="142" y="48" width="20" height="20"/>
+              </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_LdwTkc7cEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdwTks7cEfCm7_hXuDaP8g" x="31" y="30" width="150" height="70"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdwTks7cEfCm7_hXuDaP8g" x="283" y="46" width="150" height="70"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_LdwTlc7cEfCm7_hXuDaP8g" type="3007" element="_LdhDAs7cEfCm7_hXuDaP8g">
               <children xmi:type="notation:Node" xmi:id="_Ldw6oM7cEfCm7_hXuDaP8g" type="5003">
@@ -8855,8 +8921,74 @@
                 <styles xmi:type="notation:ShapeStyle" xmi:id="_Ldw6ps7cEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldw6p87cEfCm7_hXuDaP8g"/>
               </children>
+              <children xmi:type="notation:Node" xmi:id="_No6Nf87lEfCm7_hXuDaP8g" type="3001" element="_NoWz2M7lEfCm7_hXuDaP8g">
+                <children xmi:type="notation:Node" xmi:id="_No6Ngs7lEfCm7_hXuDaP8g" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_No6Ng87lEfCm7_hXuDaP8g" x="-146"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_No-e4M7lEfCm7_hXuDaP8g" type="3003" element="_NoWz2c7lEfCm7_hXuDaP8g">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_No-e4c7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No-e4s7lEfCm7_hXuDaP8g"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_No6NgM7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No6Ngc7lEfCm7_hXuDaP8g" x="-12" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_No60gM7lEfCm7_hXuDaP8g" type="3001" element="_NoWz287lEfCm7_hXuDaP8g">
+                <children xmi:type="notation:Node" xmi:id="_No60g87lEfCm7_hXuDaP8g" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_No60hM7lEfCm7_hXuDaP8g" x="-125"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_No-e487lEfCm7_hXuDaP8g" type="3003" element="_NoXa4M7lEfCm7_hXuDaP8g">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_No-e5M7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No-e5c7lEfCm7_hXuDaP8g"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_No60gc7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No60gs7lEfCm7_hXuDaP8g" x="-12" y="24" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_No7bkM7lEfCm7_hXuDaP8g" type="3001" element="_NoXa4s7lEfCm7_hXuDaP8g">
+                <children xmi:type="notation:Node" xmi:id="_No7bk87lEfCm7_hXuDaP8g" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_No7blM7lEfCm7_hXuDaP8g" x="-162"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_No-e5s7lEfCm7_hXuDaP8g" type="3003" element="_NoXa487lEfCm7_hXuDaP8g">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_No-e587lEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No-e6M7lEfCm7_hXuDaP8g"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_No7bkc7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No7bks7lEfCm7_hXuDaP8g" x="-12" y="48" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_No8CoM7lEfCm7_hXuDaP8g" type="3001" element="_NoXa5c7lEfCm7_hXuDaP8g">
+                <children xmi:type="notation:Node" xmi:id="_No8Co87lEfCm7_hXuDaP8g" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_No8CpM7lEfCm7_hXuDaP8g" x="21"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_No-e6c7lEfCm7_hXuDaP8g" type="3003" element="_NoXa5s7lEfCm7_hXuDaP8g">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_No-e6s7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No-e687lEfCm7_hXuDaP8g"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_No8Coc7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No8Cos7lEfCm7_hXuDaP8g" x="142" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_No8psM7lEfCm7_hXuDaP8g" type="3001" element="_NoXa6M7lEfCm7_hXuDaP8g">
+                <children xmi:type="notation:Node" xmi:id="_No8ps87lEfCm7_hXuDaP8g" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_No8ptM7lEfCm7_hXuDaP8g" x="21"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_No-e7M7lEfCm7_hXuDaP8g" type="3003" element="_NoXa6c7lEfCm7_hXuDaP8g">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_No-e7c7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No-e7s7lEfCm7_hXuDaP8g"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_No8psc7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No8pss7lEfCm7_hXuDaP8g" x="142" y="24" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_No9QwM7lEfCm7_hXuDaP8g" type="3001" element="_NoXa687lEfCm7_hXuDaP8g">
+                <children xmi:type="notation:Node" xmi:id="_No9Qw87lEfCm7_hXuDaP8g" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_No9QxM7lEfCm7_hXuDaP8g" x="21"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_No_F8M7lEfCm7_hXuDaP8g" type="3003" element="_NoXa7M7lEfCm7_hXuDaP8g">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_No_F8c7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No_F8s7lEfCm7_hXuDaP8g"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_No9Qwc7lEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_No9Qws7lEfCm7_hXuDaP8g" x="142" y="48" width="20" height="20"/>
+              </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_LdwTls7cEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdwTl87cEfCm7_hXuDaP8g" x="211" y="30" width="150" height="70"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdwTl87cEfCm7_hXuDaP8g" x="283" y="178" width="150" height="70"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_LdnJpc7cEfCm7_hXuDaP8g"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_LdnJps7cEfCm7_hXuDaP8g"/>
@@ -8870,7 +9002,7 @@
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldw6qs7cEfCm7_hXuDaP8g"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_Ldnwsc7cEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldnwss7cEfCm7_hXuDaP8g" x="-22" width="30" height="30"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldnwss7cEfCm7_hXuDaP8g" x="-22" y="44" width="30" height="30"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_LdoXwM7cEfCm7_hXuDaP8g" type="3012" element="_LdKdsc7cEfCm7_hXuDaP8g">
             <children xmi:type="notation:Node" xmi:id="_Ldo-0M7cEfCm7_hXuDaP8g" type="5010">
@@ -8881,7 +9013,7 @@
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldw6rc7cEfCm7_hXuDaP8g"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_LdoXwc7cEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdoXws7cEfCm7_hXuDaP8g" x="-22" y="31" width="30" height="30"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdoXws7cEfCm7_hXuDaP8g" x="-22" y="128" width="30" height="30"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Ldo-0s7cEfCm7_hXuDaP8g" type="3012" element="_LdLr0c7cEfCm7_hXuDaP8g">
             <children xmi:type="notation:Node" xmi:id="_Ldpl4M7cEfCm7_hXuDaP8g" type="5010">
@@ -8892,76 +9024,76 @@
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldxhss7cEfCm7_hXuDaP8g"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_Ldo-087cEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldo-1M7cEfCm7_hXuDaP8g" x="-22" y="62" width="30" height="30"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldo-1M7cEfCm7_hXuDaP8g" x="-22" y="220" width="30" height="30"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Ldpl4s7cEfCm7_hXuDaP8g" type="3012" element="_LdM58s7cEfCm7_hXuDaP8g">
             <children xmi:type="notation:Node" xmi:id="_LdqM8M7cEfCm7_hXuDaP8g" type="5010">
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_LdqM8c7cEfCm7_hXuDaP8g" x="31" y="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_LdqM8c7cEfCm7_hXuDaP8g" x="-134" y="1"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_Ldxhs87cEfCm7_hXuDaP8g" type="3003" element="_LdOIEM7cEfCm7_hXuDaP8g">
               <styles xmi:type="notation:ShapeStyle" xmi:id="_LdxhtM7cEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldxhtc7cEfCm7_hXuDaP8g"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_Ldpl487cEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldpl5M7cEfCm7_hXuDaP8g" x="-22" y="93" width="30" height="30"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldpl5M7cEfCm7_hXuDaP8g" x="737" y="32" width="30" height="30"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_LdqM8s7cEfCm7_hXuDaP8g" type="3012" element="_LdOIEs7cEfCm7_hXuDaP8g">
             <children xmi:type="notation:Node" xmi:id="_Ldq0AM7cEfCm7_hXuDaP8g" type="5010">
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_Ldq0Ac7cEfCm7_hXuDaP8g" x="31" y="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Ldq0Ac7cEfCm7_hXuDaP8g" x="-113" y="1"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_Ldxhts7cEfCm7_hXuDaP8g" type="3003" element="_LdPWMM7cEfCm7_hXuDaP8g">
               <styles xmi:type="notation:ShapeStyle" xmi:id="_Ldxht87cEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdxhuM7cEfCm7_hXuDaP8g"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_LdqM887cEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdqM9M7cEfCm7_hXuDaP8g" x="-22" y="124" width="30" height="30"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdqM9M7cEfCm7_hXuDaP8g" x="737" y="68" width="30" height="30"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_LdsCIM7cEfCm7_hXuDaP8g" type="3012" element="_LdP9QM7cEfCm7_hXuDaP8g">
             <children xmi:type="notation:Node" xmi:id="_LdsCI87cEfCm7_hXuDaP8g" type="5010">
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_LdsCJM7cEfCm7_hXuDaP8g" x="31" y="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_LdsCJM7cEfCm7_hXuDaP8g" x="-150"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_Ldxhuc7cEfCm7_hXuDaP8g" type="3003" element="_LdQkUM7cEfCm7_hXuDaP8g">
               <styles xmi:type="notation:ShapeStyle" xmi:id="_Ldxhus7cEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldxhu87cEfCm7_hXuDaP8g"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_LdsCIc7cEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdsCIs7cEfCm7_hXuDaP8g" x="-22" y="155" width="30" height="30"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdsCIs7cEfCm7_hXuDaP8g" x="737" y="104" width="30" height="30"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_LdspMM7cEfCm7_hXuDaP8g" type="3012" element="_LdRLYM7cEfCm7_hXuDaP8g">
             <children xmi:type="notation:Node" xmi:id="_LdtQQM7cEfCm7_hXuDaP8g" type="5010">
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_LdtQQc7cEfCm7_hXuDaP8g" x="31" y="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_LdtQQc7cEfCm7_hXuDaP8g" x="-228" y="1"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_LdxhvM7cEfCm7_hXuDaP8g" type="3003" element="_LdRycM7cEfCm7_hXuDaP8g">
               <styles xmi:type="notation:ShapeStyle" xmi:id="_Ldxhvc7cEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldxhvs7cEfCm7_hXuDaP8g"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_LdspMc7cEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdspMs7cEfCm7_hXuDaP8g" x="-22" y="186" width="30" height="30"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdspMs7cEfCm7_hXuDaP8g" x="737" y="155" width="30" height="30"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Ldt3UM7cEfCm7_hXuDaP8g" type="3012" element="_LdRycs7cEfCm7_hXuDaP8g">
             <children xmi:type="notation:Node" xmi:id="_Ldt3U87cEfCm7_hXuDaP8g" type="5010">
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_Ldt3VM7cEfCm7_hXuDaP8g" x="31" y="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Ldt3VM7cEfCm7_hXuDaP8g" x="-207" y="2"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_LdyIwM7cEfCm7_hXuDaP8g" type="3003" element="_LdTAkM7cEfCm7_hXuDaP8g">
               <styles xmi:type="notation:ShapeStyle" xmi:id="_LdyIwc7cEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdyIws7cEfCm7_hXuDaP8g"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_Ldt3Uc7cEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldt3Us7cEfCm7_hXuDaP8g" x="-22" y="217" width="30" height="30"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ldt3Us7cEfCm7_hXuDaP8g" x="737" y="204" width="30" height="30"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_LdueYM7cEfCm7_hXuDaP8g" type="3012" element="_LdTAks7cEfCm7_hXuDaP8g">
             <children xmi:type="notation:Node" xmi:id="_LdvFcM7cEfCm7_hXuDaP8g" type="5010">
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_LdvFcc7cEfCm7_hXuDaP8g" x="31" y="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_LdvFcc7cEfCm7_hXuDaP8g" x="-244"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_LdyIw87cEfCm7_hXuDaP8g" type="3003" element="_LdUOsM7cEfCm7_hXuDaP8g">
               <styles xmi:type="notation:ShapeStyle" xmi:id="_LdyIxM7cEfCm7_hXuDaP8g" fontName="Ubuntu Sans"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdyIxc7cEfCm7_hXuDaP8g"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_LdueYc7cEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdueYs7cEfCm7_hXuDaP8g" x="-22" y="248" width="30" height="30"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdueYs7cEfCm7_hXuDaP8g" x="737" y="253" width="30" height="30"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_LdnJoc7cEfCm7_hXuDaP8g" fontName="Ubuntu Sans" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdnJos7cEfCm7_hXuDaP8g"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LdnJos7cEfCm7_hXuDaP8g" width="747" height="303"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_LbqB0s7cEfCm7_hXuDaP8g"/>
       </data>
@@ -9051,6 +9183,54 @@
       <ownedDiagramElements xmi:type="diagram:DNode" uid="_LdcKgM7cEfCm7_hXuDaP8g" name="&lt;&lt;component>>&#xA;DefaultControllerCP:DefaultControllerCP [1..1]" width="15" height="7" resizeKind="NSEW">
         <target xmi:type="sysadl:ComponentUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='DefaultControllerCP']"/>
         <semanticElements xmi:type="sysadl:ComponentUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='DefaultControllerCP']"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_NoQGI87lEfCm7_hXuDaP8g" name="receivesBP : BloodPressureIPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='DefaultControllerCP']/@ports[name='receivesBP']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='DefaultControllerCP']/@ports[name='receivesBP']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_NoVlsM7lEfCm7_hXuDaP8g" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_NoWMwM7lEfCm7_hXuDaP8g" name="receivesHR : HeartRateIPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='DefaultControllerCP']/@ports[name='receivesHR']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='DefaultControllerCP']/@ports[name='receivesHR']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_NoWMwc7lEfCm7_hXuDaP8g" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_NoWMw87lEfCm7_hXuDaP8g" name="receivesOS : OxygenSaturationIPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='DefaultControllerCP']/@ports[name='receivesOS']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='DefaultControllerCP']/@ports[name='receivesOS']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_NoWMxM7lEfCm7_hXuDaP8g" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_NoWMxs7lEfCm7_hXuDaP8g" name="emitsPB : BloodPressureOPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='DefaultControllerCP']/@ports[name='emitsPB']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='DefaultControllerCP']/@ports[name='emitsPB']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_NoWz0M7lEfCm7_hXuDaP8g" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_NoWz0s7lEfCm7_hXuDaP8g" name="emitsHR : HeartRateOPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='DefaultControllerCP']/@ports[name='emitsHR']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='DefaultControllerCP']/@ports[name='emitsHR']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_NoWz087lEfCm7_hXuDaP8g" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_NoWz1c7lEfCm7_hXuDaP8g" name="emitsOS : OxygenSaturationOPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='DefaultControllerCP']/@ports[name='emitsOS']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='DefaultControllerCP']/@ports[name='emitsOS']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_NoWz1s7lEfCm7_hXuDaP8g" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
         <ownedStyle xmi:type="diagram:Square" uid="_LdhDAM7cEfCm7_hXuDaP8g" showIcon="false" iconPath="/org.sysadl.viewpoints/icons/ComponentUse.gif" labelPosition="node" width="15" height="7" color="126,177,254">
           <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@style"/>
         </ownedStyle>
@@ -9059,6 +9239,54 @@
       <ownedDiagramElements xmi:type="diagram:DNode" uid="_LdhDAs7cEfCm7_hXuDaP8g" name="&lt;&lt;component>>&#xA;AnnomalyControllerCP:AnnomalyControllerCP [1..1]" width="15" height="7" resizeKind="NSEW">
         <target xmi:type="sysadl:ComponentUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='AnnomalyControllerCP']"/>
         <semanticElements xmi:type="sysadl:ComponentUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='AnnomalyControllerCP']"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_NoWz2M7lEfCm7_hXuDaP8g" name="receivesBP : BloodPressureIPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='AnnomalyControllerCP']/@ports[name='receivesBP']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='AnnomalyControllerCP']/@ports[name='receivesBP']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_NoWz2c7lEfCm7_hXuDaP8g" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_NoWz287lEfCm7_hXuDaP8g" name="receivesHR : HeartRateIPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='AnnomalyControllerCP']/@ports[name='receivesHR']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='AnnomalyControllerCP']/@ports[name='receivesHR']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_NoXa4M7lEfCm7_hXuDaP8g" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_NoXa4s7lEfCm7_hXuDaP8g" name="receivesOS : OxygenSaturationIPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='AnnomalyControllerCP']/@ports[name='receivesOS']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='AnnomalyControllerCP']/@ports[name='receivesOS']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_NoXa487lEfCm7_hXuDaP8g" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_NoXa5c7lEfCm7_hXuDaP8g" name="emitsAnnomalyBP : AnnomalyBloodPressureOPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='AnnomalyControllerCP']/@ports[name='emitsAnnomalyBP']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='AnnomalyControllerCP']/@ports[name='emitsAnnomalyBP']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_NoXa5s7lEfCm7_hXuDaP8g" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_NoXa6M7lEfCm7_hXuDaP8g" name="emitsAnnomalyHR : AnnomalyHeartRateOPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='AnnomalyControllerCP']/@ports[name='emitsAnnomalyHR']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='AnnomalyControllerCP']/@ports[name='emitsAnnomalyHR']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_NoXa6c7lEfCm7_hXuDaP8g" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_NoXa687lEfCm7_hXuDaP8g" name="emitsAnnomalyOS : AnnomalyOxygenSaturationOPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='AnnomalyControllerCP']/@ports[name='emitsAnnomalyOS']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="HealthMonitoring.sysadl#//@packages[name='Components']/@definitions[name='MonitoringControllerCP']/@composite/@components[name='AnnomalyControllerCP']/@ports[name='emitsAnnomalyOS']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_NoXa7M7lEfCm7_hXuDaP8g" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
         <ownedStyle xmi:type="diagram:Square" uid="_LdhqEM7cEfCm7_hXuDaP8g" showIcon="false" iconPath="/org.sysadl.viewpoints/icons/ComponentUse.gif" labelPosition="node" width="15" height="7" color="126,177,254">
           <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@style"/>
         </ownedStyle>
