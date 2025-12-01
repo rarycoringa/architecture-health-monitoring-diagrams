@@ -166,4 +166,43 @@ package Components {
 	boundary component def DashboardInterfaceCP {ports : receivesAlertDashboard : AlertDashboardIPT ; receivesBPDashboard : BloodPressureIPT ; receivesHRDashboard : HeartRateIPT ; receivesOSDashboard : OxygenSaturationIPT ; }
 	boundary component def NotificationAppCP { ports : receivesAlertNotification : AlertNotificationIPT ; }
 	boundary component def SoundAlertOutCP { ports : receivesAlertSound : AlertSoundIPT ; }
+
+	activity def ProcessVitalSignsAC ( bpIn : BloodPressure ) ( hrIn : HeartRate ) ( osIn : OxygenSaturation ) : ( bpOut : BloodPressure , hrOut : HeartRate , osOut : OxygenSaturation ) { body { 
+		actions :
+			processBloodPressureAN : processBloodPressureAN { using pins : bloodPressureIn : BloodPressure ; }
+			processHeartRateAN : processHeartRateAN { using pins : heartRateIn : HeartRate ; }
+			processOxygenSaturationAN : processOxygenSaturationAN { using pins : oxygenSaturationIn : OxygenSaturation ; }
+			
+		delegate bpIn to bloodPressureIn
+		delegate hrIn to heartRateIn
+		delegate osIn to oxygenSaturationIn
+		
+		delegate bpOut to processBloodPressureAN
+		delegate hrOut to processHeartRateAN
+		delegate osOut to processOxygenSaturationAN
+	} }
+	
+	action def processBloodPressureAN ( bloodPressureIn : BloodPressure ) : BloodPressure { }
+	action def processHeartRateAN ( heartRateIn : HeartRate ) : HeartRate { }
+	action def processOxygenSaturationAN ( oxygenSaturationIn : OxygenSaturation ) : OxygenSaturation { }
+	
+	activity def EvaluateAnnomaly ( bpIn : BloodPressure ) ( hrIn : HeartRate ) ( osIn : OxygenSaturation ) : ( bpOut : BloodPressure , hrOut : HeartRate , osOut : OxygenSaturation ) { body {
+		actions :
+			evaluateBloodPressureAN : evaluateBloodPressureAN { using pins : bloodPressureIn : BloodPressure ; }
+			evaluateHeartRateAN : evaluateHeartRateAN { using pins : heartRateIn : HeartRate ; }
+			evaluateOxygenSaturationAN : evaluateOxygenSaturationAN { using pins : oxygenSaturationIn : OxygenSaturation ; }
+			
+		delegate bpIn to bloodPressureIn
+		delegate hrIn to heartRateIn
+		delegate osIn to oxygenSaturationIn
+		
+		delegate bpOut to evaluateBloodPressureAN
+		delegate hrOut to evaluateHeartRateAN
+		delegate osOut to evaluateOxygenSaturationAN
+	} }
+	
+	action def evaluateBloodPressureAN ( bloodPressureIn : BloodPressure ) : BloodPressure { }
+	action def evaluateHeartRateAN ( heartRateIn : HeartRate ) : HeartRate { }
+	action def evaluateOxygenSaturationAN ( oxygenSaturationIn : OxygenSaturation ) : OxygenSaturation { }
+
 }
